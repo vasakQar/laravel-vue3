@@ -18,7 +18,7 @@ class BlogResource extends JsonResource
         $imageUrl = Storage::url('public/'.$this->image);
         return [
             'id' => $this->id,
-            'user_id' => $this->user_id,
+            'user' => $this->user,
             'title' => $this->title,
             'content' => $this->content,
             'image' => $imageUrl,

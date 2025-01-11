@@ -55,7 +55,7 @@ export default {
         });
         blog.value = response.data.data;
         const userId = localStorage.getItem('user_id');
-        isOwner.value = blog.value.user_id === parseInt(userId);
+        isOwner.value = blog.value.user.id === parseInt(userId);
       } catch (error) {
         console.error('Error fetching blog:', error);
       }

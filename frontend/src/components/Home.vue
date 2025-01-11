@@ -16,11 +16,16 @@
     </div>
     <ul class="list-group">
       <li v-for="blog in blogs" :key="blog.id" class="list-group-item" @click="goToBlog(blog.id)">
-        <div class="d-flex">
-          <img :src="baseUrl + blog.image" alt="Blog Image" class="img-thumbnail me-3" style="width: 100px; height: 100px;">
-          <div>
-            <h5>{{ blog.title }}</h5>
-            <p>{{ blog.content.substring(0, 100) }} ...</p>
+        <div class="d-flex justify-content-between">
+          <div class="d-flex">
+            <img :src="baseUrl + blog.image" alt="Blog Image" class="img-thumbnail me-3" style="width: 100px; height: 100px;">
+            <div>
+              <h5>{{ blog.title }}</h5>
+              <p>{{ blog.content.substring(0, 100) }} ...</p>
+            </div>
+          </div>
+          <div class="align-self-end">
+            <small>{{ blog.user.name }}</small>
           </div>
         </div>
       </li>
