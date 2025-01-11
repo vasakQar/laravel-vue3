@@ -47,7 +47,7 @@ class AuthController extends Controller
 
             $token = $user->createToken('YourAppName')->plainTextToken;
 
-            return response()->json(['message' => 'Login successful', 'token' => $token]);
+            return response()->json(['message' => 'Login successful', 'token' => $token, 'user' => $user]);
         }
 
         return response()->json(['message' => 'Invalid credentials'], 401);
